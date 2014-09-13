@@ -1,0 +1,51 @@
+---
+title       : Ev
+subtitle    : 
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+
+
+## Slide 2
+
+Ev satýþlarý düþüyorsa
+
+```{r,echo=FALSE}
+require(googleVis)
+require(foreign)
+require(RCurl)
+options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
+url<-"https://raw.githubusercontent.com/erdemakkas/konutsatis/master/pivot2.txt"
+mydata<-read.delim(textConnection(getURL(url)),sep="\t",header=TRUE)
+levels(mydata$Yil)<-c("Ocak","Þubat","Mart","Nisan","Mayýs","Haziran","Temmuz","Aðustos","Eylül","Ekim","Kasým","Aralýk")
+g1<-gvisLineChart(mydata, xvar="Yil", yvar=c("X2013", "X2014"),    options=list(title="Hello World"))
+plot(g1)
+
+```
+
+--- .
+
+## Grafik
+
+```{r opts.label = 'interactive',echo=FALSE, results = 'asis'}
+require(rCharts)
+require(reshape2)
+mPlot(x = "Yil", y = c("X2013", "X2014"), type = "Line", data = mydata)
+
+
+```
+
+--- .
+
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
