@@ -15,7 +15,7 @@ knit        : slidify::knit2slides
 
 ## Slide 2
 
-Ev sat??lar? d???yorsa 4444
+Ev sat??lar? d???yorsa 4444sss
 
 ```{r,echo=FALSE}
 require(googleVis)
