@@ -15,7 +15,7 @@ knit        : slidify::knit2slides
 
 ## Slide 2
 
-Ev satýþlarý düþüyorsa
+Ev sat??lar? d???yorsa egerki
 
 ```{r,echo=FALSE}
 require(googleVis)
@@ -24,7 +24,7 @@ require(RCurl)
 options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
 url<-"https://raw.githubusercontent.com/erdemakkas/konutsatis/master/pivot2.txt"
 mydata<-read.delim(textConnection(getURL(url)),sep="\t",header=TRUE)
-levels(mydata$Yil)<-c("Ocak","Þubat","Mart","Nisan","Mayýs","Haziran","Temmuz","Aðustos","Eylül","Ekim","Kasým","Aralýk")
+levels(mydata$Yil)<-c("Ocak","?ubat","Mart","Nisan","May?s","Haziran","Temmuz","A?ustos","Eyl?l","Ekim","Kas?m","Aral?k")
 g1<-gvisLineChart(mydata, xvar="Yil", yvar=c("X2013", "X2014"),    options=list(title="Hello World"))
 plot(g1)
 
