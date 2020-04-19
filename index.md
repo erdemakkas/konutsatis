@@ -15,7 +15,7 @@ knit        : slidify::knit2slides
 
 ## Slide 2
 
-Ev satýþlarý düþüyorsa
+Ev sat??lar? d???yorsa eger
 
 
 ```
@@ -28,7 +28,7 @@ Ev satýþlarý düþüyorsa
 
 
 ```
-## Error: 'opts_current' nesnesi bulunamadý
+## Error: 'opts_current' nesnesi bulunamad?
 ```
 
 --- .
